@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/Navbar.js';
+import Home from './components/Home.js';
+import Contact from './components/Contact.js';
+import Information from './components/Information.js';
+import Footer from './components/Footer.js';
+import TargetCollection from './components/TargetCollection.js';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <Navbar />
+
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/targetcollection' element={<TargetCollection />} />
+        </Routes>
+
+        <Contact />
+        <Information />
+        <Footer />
+      </>
+    </Router>
   );
 }
 

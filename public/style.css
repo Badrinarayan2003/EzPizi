@@ -1,0 +1,414 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAVBAR  */
+.navbar {
+    height: 17vh;
+    z-index: 100;
+    transition: .3s ease-in;
+}
+.navbar .container div a{
+    color: rgb(171 173 175);
+}
+.nav-bg {
+    background-color: #24141c;
+    opacity: 0.5;
+}
+
+.nav-buttons .btn1 i {
+    font-size: 1.7rem;
+}
+
+.nav-buttons .btn2 i {
+    font-size: 1.8rem;
+}
+
+.nav-buttons .btn2 span {
+    font-size: 1rem;
+    position: relative;
+    top: -0.6rem;
+    left: 1.5px;
+}
+
+
+/* HERO SECTION  */
+.hero {
+    background-color: rgb(235, 236, 236);
+}
+
+.slider-cotent-box img {
+    height: 85vh;
+}
+
+#hero-content-box {
+    right: 53%;
+    bottom: 12.5rem;
+    text-align: start;
+    width: 100%;
+}
+
+#hero-content-box h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#hero-content-box a {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.9rem;
+}
+
+#hero-carousel-indicator {
+    align-items: center;
+}
+
+#hero-carousel-indicator button {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+}
+
+#hero-carousel-indicator .active {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+}
+
+/* PRODUCT SECTION  */
+
+.img-box {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.card-img-top {
+    height: 270px;
+    mix-blend-mode: multiply;
+}
+
+#add-to-cart-btn {
+    position: absolute;
+    bottom: 7.4rem;
+    right: 2rem;
+    opacity: 0;
+}
+
+.img-box:hover #add-to-cart-btn {
+    opacity: 1;
+    transition: .5s linear;
+}
+
+.product-detail-box {
+    padding: 0.5rem;
+}
+
+.product-title {
+    font-size: 0.8rem;
+    color: #101415;
+}
+
+.rating-icon {
+    margin-bottom: 0rem;
+    color: #111112;
+    font-size: 0.8rem;
+}
+
+#collection-card {
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+#collection-card:hover {
+    scale: 1.1;
+}
+
+#collection-card img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.collection-container {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem 0rem;
+}
+
+
+.collec-text-box h4 {
+    margin-bottom: -1.5rem;
+}
+
+.pagination .page-item .page-link {
+    background-color: rgb(235, 236, 236);
+}
+
+/* CONTACT SECTION  */
+.contact-section {
+    background-color: rgb(235, 236, 236);
+}
+
+.contact-section .container .contact-card {
+    border: 1px solid gray;
+    width: 100%;
+    padding: 3.5rem 2rem;
+    background-color: rgb(235, 236, 236);
+}
+
+.contact-card-body {
+    background-color: rgb(216, 216, 216);
+    border-radius: 0.63rem;
+    margin-top: 3rem;
+}
+
+.contact-input-box input {
+    border: 1px solid rgb(167, 164, 164);
+}
+
+.contact-input-box textarea {
+    border: 1px solid rgb(167, 164, 164);
+}
+
+.contact-card-body button {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.6rem 3rem;
+}
+
+.card-img-top {
+    height: 380px;
+}
+
+/* INFORMATION SECTION  */
+.info-section {
+    background-color: rgb(235, 236, 236);
+}
+
+.info-container {
+    padding: 5rem;
+}
+
+#info-carousel-indic button {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: #101415;
+}
+
+/* FOOTER SECTION  */
+
+.footer-section {
+    padding: 3rem;
+}
+
+.footer-add {
+    padding: 1rem;
+}
+
+.footer-add h3 {
+    font-size: 1.35rem;
+}
+
+.footer-copy-right {
+    font-size: 0.9rem;
+}
+
+/* COLLECTION SECTION  */
+.product-collec-section{
+    background-color: rgb(235, 236, 236);
+}
+.product-collec-section .container{
+    padding-top: 11rem;
+}
+.pro-collec-box img {
+    height: 490px;
+}
+.pro-collec-box div h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.product-collec-section .container .row:nth-of-type(2){
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+
+@media(max-width:1200px) {
+    .pro-collec-box img {
+        height: 470px;
+    }
+}
+
+@media(max-width:992px) {
+
+
+    .collec-text-box h4 {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        height: 270px;
+    }
+
+    .pro-collec-box img {
+        height: 420px;
+    }
+
+    .pro-collec-box div h2 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width:768px) {
+    .nav-buttons .btn1 {
+        font-size: 0.9rem;
+        margin-right: 0;
+    }
+
+    .nav-buttons .btn1 i {
+        font-size: 1.3rem;
+    }
+
+    .nav-buttons .btn2 i {
+        font-size: 1.4rem;
+    }
+
+    .nav-buttons .btn2 span {
+        font-size: 0.8rem;
+    }
+
+    /* hero section  */
+    .slider-cotent-box img {
+        height: 65vh;
+    }
+
+    #hero-content-box {
+        bottom: 9.5rem;
+    }
+
+    #hero-content-box h2 {
+        font-size: 2.2rem;
+    }
+
+    #hero-content-box a {
+        font-size: 1rem;
+        padding: 0.6rem 1.8rem;
+    }
+
+    /* product section  */
+
+    .product-title {
+        font-size: 0.9rem;
+    }
+
+    .collection-row-box {
+        row-gap: 1rem;
+    }
+
+    #add-to-cart-btn {
+        opacity: 1;
+    }
+
+    /* collection section  */
+    .pro-collec-box img {
+        height: 320px;
+    }
+
+    .pro-collec-box div h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:599px) {
+    .slider-cotent-box img {
+        height: 55vh;
+    }
+
+    #inner-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #hero-content-box {
+        bottom: 6.5rem;
+    }
+
+    #hero-content-box h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero-content-box a {
+        padding: 0.5rem 1.7rem;
+    }
+
+
+}
+
+@media(max-width:425px) {
+    #hero-content-box {
+        bottom: 3.5rem;
+    }
+
+    #hero-content-box h2 {
+        font-size: 1.3rem;
+    }
+
+    #hero-content-box a {
+        padding: 0.4rem 1.3rem;
+    }
+
+    .collec-text-box h4 {
+        font-size: 0.8rem;
+    }
+
+    .product-title {
+        font-size: 0.72rem;
+    }
+
+    .slider-cotent-box img {
+        height: 44vh;
+    }
+
+    .card-img-top {
+        height: 230px;
+    }
+
+    .footer-copy-right {
+        text-align: center;
+    }
+
+    /* collection section  */
+    .pro-collec-box img {
+        height: 218px;
+    }
+
+    .pro-collec-box div h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .card-img-top {
+        height: 165px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    #add-to-cart-btn {
+        bottom: 8.4rem;
+        right: 0.5rem;
+        font-size: 0.7rem;
+    }
+}
