@@ -17,7 +17,7 @@ function Navbar() {
         <nav className={color ? "navbar navbar-expand-lg navbar-light position-fixed w-100 nav-bg" : "navbar navbar-expand-lg navbar-light position-fixed w-100"}>
             <div className="container">
                 <div>
-                    <a className="navbar-brand mx-auto fw-bold fs-3" href="#">Ecom</a>
+                    <a className="navbar-brand mx-auto fw-bold fs-3" href="#">EasyPizi</a>
                 </div>
 
                 <div className="buttons nav-buttons">
