@@ -15,13 +15,13 @@ function Contact() {
                                 <div className="row g-2">
                                     <div className="col-md">
                                         <div className="form-floating contact-input-box">
-                                            <input type="text" className="form-control bg-transparent" id="floatingInputGrid" placeholder="Full Name" value="name" />
+                                            <input type="text" className="form-control bg-transparent" id="floatingInputGrid" placeholder="Full Name" value="" />
                                             <label htmlFor="floatingInputGrid bg-transparent ">Full Name</label>
                                         </div>
                                     </div>
                                     <div className="col-md">
                                         <div className="form-floating contact-input-box">
-                                            <input type="email" className="form-control bg-transparent" id="floatingInputGrid" placeholder="name@example.com" value="email" />
+                                            <input type="email" className="form-control bg-transparent" id="floatingInputGrid" placeholder="name@example.com" value="" />
                                             <label htmlFor="floatingInputGrid bg-transparent ">Email</label>
                                         </div>
                                     </div>
