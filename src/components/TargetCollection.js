@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Loading from './Loading'
 
 
 function TargetCollection() {
 
+    const navigate = useNavigate();
     const location = useLocation();
     const foreignData = location.state;
-
-
 
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
@@ -20,7 +20,7 @@ function TargetCollection() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '84f9a22f72msh0a533140e334fe5p1a51acjsnf4b148d7c65b',
+                'X-RapidAPI-Key': 'd55a9a3f2amshb628d66b6c833eep1bfb2fjsna0127019c969',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -50,13 +50,13 @@ function TargetCollection() {
                     data.map((product) => {
                         return (
                             <div className="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-6 mb-4 product-box" key={product.asin}>
-                                <div className="card border-0 img-box">
+                                <div className="card border-0 img-box" onClick={() => { navigate("/singlecard", { state: { key: `${product.asin}` } }) }}>
                                     <img src={product.product_photo} className="card-img-top" alt={product.product_title} />
                                     <a type="button" href='/' className="btn btn-dark fw-bold rounded-pill" id='add-to-cart-btn'>+add to</a>
                                     <div className="card-body product-detail-box">
-                                        <p className="card-text mb-0 product-title">{product.product_title.substring(0, 35)}..</p>
+                                        <p className="card-text mb-0 product-title">{product.product_title && product.product_title.substring(0, 35)}..</p>
                                         <p className="rating-icon fw-bold"><i className="fa fa-solid fa-star" style={{ color: '#F0A53D' }}></i> {product.product_star_rating}</p>
-                                        <h6 className="card-title fw-bold fs-5">{product.product_price}</h6>
+                                        <h6 className="card-title fw-bold fs-5">Rs {product.product_price && product.product_price.slice(1)}</h6>
                                     </div>
                                 </div>
                             </div>

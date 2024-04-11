@@ -17,7 +17,6 @@ function Navbar() {
         <nav className={color ? "navbar navbar-expand-lg navbar-light position-fixed w-100 nav-bg" : "navbar navbar-expand-lg navbar-light position-fixed w-100"}>
             <div className="container">
                 <div>
-                    {/* <a className="navbar-brand mx-auto fw-bold fs-3" href="#">EasyPizi</a> */}
                     <img src="/images/logo2.png" alt="logo" className="navbar-brand mx-auto" style={{width:'6rem'}}/>
                 </div>
 

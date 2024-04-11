@@ -1,7 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 
 function Collections() {
+    
     const navigate = useNavigate()
+
+
     return (
         <div className="row">
             <div className="col-md-12">
