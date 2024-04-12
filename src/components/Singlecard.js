@@ -32,11 +32,13 @@ function Singlecard() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '8d97104967msh968c09b09c3f75ep1dda6fjsncccc79e94bc1',
+                'X-RapidAPI-Key': 'd7987035f0msh41cbea9a87bed09p1b2b75jsn3a40818bbbe1',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
+
         setLoading(true)
+        
         try {
             const response = await fetch(url, options);
             const result = await response.json();
@@ -51,7 +53,7 @@ function Singlecard() {
     useEffect(() => {
         getData()
     }, [])
-    console.log(data);
+    
     let price = data.product_price ? Number(data.product_price.replace('₹', '').replace(',', '')) : "";
     let originalPrice = data.product_original_price ? Number(data.product_original_price.replace('₹', '').replace(',', '')) : "";
 
