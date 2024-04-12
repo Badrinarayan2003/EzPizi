@@ -57,6 +57,7 @@
 .search-form input {
     padding: 0.7rem 1rem;
     width: 99%;
+    height: 12%;
     border: none;
     outline: none;
     border-bottom: 2px solid black;

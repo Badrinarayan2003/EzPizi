@@ -19,7 +19,7 @@ function Navbar() {
             <nav className={color ? "navbar navbar-expand-lg navbar-light position-fixed w-100 nav-bg" : "navbar navbar-expand-lg navbar-light position-fixed w-100"}>
                 <div className="container">
                     <div>
-                        <img src="/images/logo2.png" alt="logo" className="navbar-brand mx-auto" style={{ width: '6rem' }} />
+                        <img src="/images/ez-pizi.png" alt="logo" className="navbar-brand mx-auto" style={{ width: '3rem',cursor:'pointer' }} />
                     </div>
 
                     <div className="buttons nav-buttons d-flex align-items-center">

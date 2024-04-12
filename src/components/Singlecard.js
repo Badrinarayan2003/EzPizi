@@ -5,6 +5,7 @@ import SingleProductLoader from './SingleProductLoader';
 function Singlecard() {
 
     let [count, setCount] = useState(1)
+    const[size,setSize]=useState('S')
 
     const handleIncrement = () => {
         if (count < 9) {
@@ -81,12 +82,12 @@ function Singlecard() {
                                 <p className='mb-0 fw-bold btn rounded-pill border-0 off'>save <span>{100 - Math.round(offer)}%</span></p>
                             </div>
                             <div className='size-chart-box my-4'>
-                                <p className='size'>Size: <span className='fw-bold'>S</span></p>
+                                <p className='size'>Size: <span className='fw-bold'>{size}</span></p>
                                 <div className='size-chart d-flex gap-4'>
-                                    <p className='mb-0'>S</p>
-                                    <p className='mb-0'>M</p>
-                                    <p className='mb-0'>XL</p>
-                                    <p className='mb-0'>XXL</p>
+                                    <p className='mb-0' onClick={()=>setSize('S')}>S</p>
+                                    <p className='mb-0' onClick={()=>setSize('M')}>M</p>
+                                    <p className='mb-0' onClick={()=>setSize('XL')}>XL</p>
+                                    <p className='mb-0' onClick={()=>setSize('XXL')}>XXL</p>
                                 </div>
                             </div>
                             <div className='single-count-box my-3'>
