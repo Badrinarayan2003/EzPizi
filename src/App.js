@@ -9,6 +9,7 @@ import Information from './components/Information.js';
 import Footer from './components/Footer.js';
 import TargetCollection from './components/TargetCollection.js';
 import Singlecard from './components/Singlecard.js';
+import SearchResult from './components/SearchResult.js';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route path='/targetcollection' element={<TargetCollection />} />
           <Route path='/singlecard' element={<Singlecard/>}/>
+          <Route path='/search-result' element={<SearchResult/>}/>
         </Routes>
 
         <Contact />

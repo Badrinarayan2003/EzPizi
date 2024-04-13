@@ -1,26 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import Loading from './Loading'
+import { useState, useEffect } from "react";
+import Loading from "./Loading";
+import { useLocation } from "react-router-dom";
 
-
-function TargetCollection() {
-
-    const navigate = useNavigate();
-    const location = useLocation();
-    const foreignData = location.state;
+function SearchResult() {
 
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState(false)
 
+    const location = useLocation()
+    const searchRefer = location.state
+    const [search, setSearch] = useState(searchRefer.searchData)
+    const [searchKey, setSearchKey] = useState()
+
     const getData = async () => {
 
-        const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=${foreignData.searchKey}&page=2&country=IN&category_id=aps`;
+        const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=${search}&page=2&country=IN&category_id=aps`;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '805cd9a7femsh8885f87d081ff8fp144fb4jsn0f549245a44f',
+                'X-RapidAPI-Key': 'b9f8e870d8msh24d59f6a7d518d9p116f88jsn4a54dda687fc',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -41,16 +40,26 @@ function TargetCollection() {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [search])
 
-    const ProductCard = () => {
+
+    const handlChange = (evt) => {
+        setSearchKey(evt.target.value)
+    }
+
+    const handleClick = (evt) => {
+        evt.preventDefault()
+        setSearch(searchKey)  
+    }
+
+    const Card = () => {
         return (
             <>
                 {
                     data.map((product) => {
                         return (
-                            <div className="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-6 mb-4 product-box" key={product.asin}>
-                                <div className="card border-0 img-box" onClick={() => { navigate("/singlecard", { state: { key: `${product.asin}` } }) }}>
+                            < div className="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-6 mb-4 product-box" key={product.asin} >
+                                <div className="card border-0 img-box" >
                                     <img src={product.product_photo} className="card-img-top" alt={product.product_title} />
                                     <a type="button" href='/' className="btn btn-dark fw-bold rounded-pill" id='add-to-cart-btn'>+add to</a>
                                     <div className="card-body product-detail-box">
@@ -59,7 +68,7 @@ function TargetCollection() {
                                         <h6 className="card-title fw-bold fs-5">Rs {product.product_price && product.product_price.slice(1)}</h6>
                                     </div>
                                 </div>
-                            </div>
+                            </div >
                         )
                     })
                 }
@@ -67,29 +76,25 @@ function TargetCollection() {
         )
     }
 
+
     return (
-        <div className="product-collec-section">
+        <div className="search-result-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="banner">
-                            <div className="card bg-dark text-white pro-collec-box">
-                                <img src={foreignData.img} className="card-img" alt="..." />
-                                <div className="card-img-overlay d-flex justify-content-center align-items-center">
-                                    <h2 className="card-title">{foreignData.title}</h2>
-                                </div>
-                            </div>
+                        <div className="search-box float-end">
+                            <input type="text" placeholder="Search..." value={searchKey} onChange={handlChange} />
+                            <a onClick={handleClick}><i className="fa fa-solid fa-search"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <div className="row">
-                    {loading ? (<Loading />) : (<ProductCard />)}
-                    {errorMsg && (<p className='fs-2 fw-bold text-center'>An error occurred while fetching data.</p>)}
+                <div className="row" style={{ padding: '3rem 0' }}>
+                    {loading ? (<Loading />) : (<Card />)}
+                    {errorMsg ? <h3 className="text-center fw-bold">Can't Fetch Data</h3> : ""}
                 </div>
             </div>
         </div>
     );
-}
 
-export default TargetCollection;
+}
+export default SearchResult;

@@ -5,7 +5,7 @@ import SingleProductLoader from './SingleProductLoader';
 function Singlecard() {
 
     let [count, setCount] = useState(1)
-    const[size,setSize]=useState('S')
+    const [size, setSize] = useState('S')
 
     const handleIncrement = () => {
         if (count < 9) {
@@ -33,13 +33,13 @@ function Singlecard() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'd7987035f0msh41cbea9a87bed09p1b2b75jsn3a40818bbbe1',
+                'X-RapidAPI-Key': '3687736882msh69383b0b99e23b5p11d68djsne956f868fd8a',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
 
         setLoading(true)
-        
+
         try {
             const response = await fetch(url, options);
             const result = await response.json();
@@ -54,7 +54,7 @@ function Singlecard() {
     useEffect(() => {
         getData()
     }, [])
-    
+
     let price = data.product_price ? Number(data.product_price.replace('₹', '').replace(',', '')) : "";
     let originalPrice = data.product_original_price ? Number(data.product_original_price.replace('₹', '').replace(',', '')) : "";
 
@@ -84,10 +84,10 @@ function Singlecard() {
                             <div className='size-chart-box my-4'>
                                 <p className='size'>Size: <span className='fw-bold'>{size}</span></p>
                                 <div className='size-chart d-flex gap-4'>
-                                    <p className='mb-0' onClick={()=>setSize('S')}>S</p>
-                                    <p className='mb-0' onClick={()=>setSize('M')}>M</p>
-                                    <p className='mb-0' onClick={()=>setSize('XL')}>XL</p>
-                                    <p className='mb-0' onClick={()=>setSize('XXL')}>XXL</p>
+                                    <p className='mb-0' onClick={() => setSize('S')}>S</p>
+                                    <p className='mb-0' onClick={() => setSize('M')}>M</p>
+                                    <p className='mb-0' onClick={() => setSize('XL')}>XL</p>
+                                    <p className='mb-0' onClick={() => setSize('XXL')}>XXL</p>
                                 </div>
                             </div>
                             <div className='single-count-box my-3'>

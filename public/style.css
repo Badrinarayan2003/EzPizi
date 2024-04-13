@@ -54,15 +54,28 @@
     right: 0;
 }
 
-.search-form input {
+.search-form .input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.search-form .input-box input {
     padding: 0.7rem 1rem;
-    width: 99%;
+    width: 88%;
     height: 12%;
     border: none;
     outline: none;
-    border-bottom: 2px solid black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+}
+
+.search-form .input-box a i {
+    font-size: 1.4rem;
+    color: rgb(45, 43, 43);
+    cursor: pointer;
 }
 
 /* HERO SECTION  */
@@ -255,7 +268,7 @@
 }
 
 .product-collec-section .container {
-    padding-top: 11rem;
+    padding-top: 7rem;
 }
 
 .pro-collec-box img {
@@ -363,6 +376,38 @@
     background-color: red;
 }
 
+/* SEARCH RESULT  */
+.search-result-section {
+    background-color: rgb(235, 236, 236);
+}
+
+.search-result-section .container {
+    padding-top: 7rem;
+}
+
+.search-box {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-box input {
+    padding: 0.9rem 1.1rem;
+    width: 88%;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.search-box a i {
+    font-size: 3rem;
+    color: rgb(45, 43, 43);
+    cursor: pointer;
+}
+
 @media(max-width:1200px) {
     .pro-collec-box img {
         height: 470px;
@@ -386,6 +431,11 @@
 
     .pro-collec-box div h2 {
         font-size: 3rem;
+    }
+
+    /* search result  */
+    .search-box {
+        width: 100%;
     }
 }
 
@@ -550,6 +600,11 @@
 
     .single-card-body .card-text {
         font-size: 1rem;
+    }
+
+    /* search result  */
+    .search-box input {
+        width: 83%;
     }
 }
 

@@ -1,10 +1,11 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
     const [visible, setVisible] = useState(false)
 
     const [color, setColor] = useState(false)
+
     const handleColor = () => {
         if (window.scrollY >= 180) {
             setColor(true)
@@ -14,12 +15,22 @@ function Navbar() {
     }
     window.addEventListener('scroll', handleColor)
 
+    const navigate = useNavigate()
+    const [searchData, setSearchData] = useState("")
+    const handleChange = (evt) => {
+        setSearchData(evt.target.value)
+    }
+    const handleClick=()=>{
+        navigate("/search-result", { state: { searchData } })
+        setVisible(false)
+    }
+
     return (
         <>
             <nav className={color ? "navbar navbar-expand-lg navbar-light position-fixed w-100 nav-bg" : "navbar navbar-expand-lg navbar-light position-fixed w-100"}>
                 <div className="container">
                     <div>
-                        <img src="/images/ez-pizi.png" alt="logo" className="navbar-brand mx-auto" style={{ width: '3rem',cursor:'pointer' }} />
+                        <img src="/images/ez-pizi.png" alt="logo" className="navbar-brand mx-auto" style={{ width: '3rem', cursor: 'pointer' }} />
                     </div>
 
                     <div className="buttons nav-buttons d-flex align-items-center">
@@ -30,7 +41,10 @@ function Navbar() {
             </nav>
 
             <div className={visible ? "search-form search-show" : "search-form"} id="nav-search">
-                <input type="text" placeholder="Search..." />
+                <div className="input-box">
+                    <input type="text" placeholder="Search..." onChange={handleChange} />
+                    <a onClick={handleClick}><i className="fa fa-solid fa-search"></i></a>
+                </div>
             </div>
         </>
     )
