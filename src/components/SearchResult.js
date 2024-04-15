@@ -11,7 +11,6 @@ function SearchResult() {
     const location = useLocation()
     const searchRefer = location.state
     const [search, setSearch] = useState(searchRefer.searchData)
-    const [searchKey, setSearchKey] = useState()
 
     const getData = async () => {
 
@@ -19,7 +18,7 @@ function SearchResult() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '936a724c1fmsh6ba27e16de0ce0dp1a0722jsnea196407aa2c',
+                'X-RapidAPI-Key': '50e7534f75mshccdc0d78727a072p1c8486jsnf6f65509751c',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -39,18 +38,21 @@ function SearchResult() {
     }
 
     useEffect(() => {
-        getData()
+        let timeOut = setTimeout(() => {
+            getData()
+        }, 2000);
+
+        return () => {
+            clearTimeout(timeOut)
+        }
+
     }, [search])
 
 
     const handlChange = (evt) => {
-        setSearchKey(evt.target.value)
+        setSearch(evt.target.value)
     }
 
-    const handleClick = (evt) => {
-        evt.preventDefault()
-        setSearch(searchKey)  
-    }
 
     const Card = () => {
         return (
@@ -83,8 +85,7 @@ function SearchResult() {
                 <div className="row">
                     <div className="col-12">
                         <div className="search-box float-end">
-                            <input type="text" placeholder="Search..." value={searchKey} onChange={handlChange} />
-                            <a onClick={handleClick}><i className="fa fa-solid fa-search"></i></a>
+                            <input type="text" placeholder="Search..." value={search} onChange={handlChange} />
                         </div>
                     </div>
                 </div>

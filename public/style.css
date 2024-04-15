@@ -387,25 +387,16 @@
 
 .search-box {
     width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .search-box input {
     padding: 0.9rem 1.1rem;
-    width: 88%;
+    width: 100%;
     border-radius: 2rem;
     outline: none;
     border: none;
     font-size: 1.1rem;
     font-weight: 600;
-}
-
-.search-box a i {
-    font-size: 3rem;
-    color: rgb(45, 43, 43);
-    cursor: pointer;
 }
 
 @media(max-width:1200px) {
@@ -602,10 +593,6 @@
         font-size: 1rem;
     }
 
-    /* search result  */
-    .search-box input {
-        width: 83%;
-    }
 }
 
 @media (max-width: 375px) {
