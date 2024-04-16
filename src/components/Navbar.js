@@ -35,7 +35,7 @@ function Navbar() {
 
                     <div className="buttons nav-buttons d-flex align-items-center">
                         <a className="btn btn1 border-0 fw-bold" onClick={() => setVisible(!visible)} ><i className="fa fa-solid fa-search me-1"></i></a>
-                        <a href="/" className="btn btn2 border-0"><i className="fa fa-shopping-cart"></i><span>10</span></a>
+                        <a href="/" className="btn btn2 border-0"><i className="fa fa-shopping-cart"></i><span></span></a>
                     </div>
                 </div>
             </nav>
