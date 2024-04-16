@@ -33,7 +33,7 @@ function Singlecard() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '50e7534f75mshccdc0d78727a072p1c8486jsnf6f65509751c',
+                'X-RapidAPI-Key': '873a98717fmsh70a293fb3ae9fcap179012jsna5c7c20b120e',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };

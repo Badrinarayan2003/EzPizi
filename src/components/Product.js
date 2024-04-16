@@ -8,16 +8,17 @@ function Product() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState(false)
+    let [pageCount, setPageCount] = useState(1)
 
     const navigate = useNavigate()
 
     const getData = async () => {
 
-        const url = 'https://real-time-amazon-data.p.rapidapi.com/search?query=newarrival&page=1&country=IN&category_id=aps';
+        const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=newarrival&page=${pageCount}&country=IN&category_id=aps`;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '50e7534f75mshccdc0d78727a072p1c8486jsnf6f65509751c',
+                'X-RapidAPI-Key': '873a98717fmsh70a293fb3ae9fcap179012jsna5c7c20b120e',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -38,7 +39,21 @@ function Product() {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [pageCount])
+
+
+    const handleIncrement = () => {
+        if (pageCount < 3) {
+            setPageCount(pageCount = pageCount + 1)
+        }
+    }
+
+    const handleDecrement = () => {
+        if (pageCount >1) {
+            setPageCount(pageCount = pageCount-1)
+        }
+    }
+
 
 
     const ProductCard = () => {
@@ -78,14 +93,15 @@ function Product() {
             <nav aria-label="Page navigation example ">
                 <ul className="pagination justify-content-center">
                     <li className="page-item">
-                        <a className="page-link" href="#" aria-label="Previous">
-                            <i className="fa fa-sharp fa-light fa-arrow-left text-dark"></i>
+                        <a className="page-link" aria-label="Previous" onClick={handleDecrement}>
+                            <i className="fa fa-sharp fa-light fa-arrow-left text-dark"  ></i>
                         </a>
                     </li>
                     <li className="page-item"><span className="page-link text-dark">1</span></li>
                     <li className="page-item"><span className="page-link text-dark">2</span></li>
+                    <li className="page-item"><span className="page-link text-dark">3</span></li>
                     <li className="page-item">
-                        <a className="page-link" href="#" aria-label="Next">
+                        <a className="page-link" aria-label="Next" onClick={handleIncrement}>
                             <i className="fa fa-sharp fa-light fa-arrow-right text-dark"></i>
                         </a>
                     </li>

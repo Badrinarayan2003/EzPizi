@@ -57,7 +57,7 @@ function Contact() {
                         </div>
                         <div className="col-md-7">
                             {visible ? (<p className="text-center fw-bold">Send Successfully</p>) : ""}
-                            <div className="card-body contact-card-body" style={{ padding: '4rem 2rem' }}>
+                            <div className="card-body contact-card-body" id="cotact-content-box" >
                                 <div className="row g-2">
                                     <div className="col-md">
                                         <div className="form-floating contact-input-box">

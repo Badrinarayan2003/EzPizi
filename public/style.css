@@ -532,6 +532,11 @@
 
 
 }
+@media(min-width:425px) {
+    #cotact-content-box{
+        padding: 4rem 2rem;
+    }
+}
 
 @media(max-width:425px) {
 
@@ -567,7 +572,7 @@
     }
 
     .card-img-top {
-        height: 230px;
+        height: 207px;
     }
 
     .footer-copy-right {
@@ -597,7 +602,7 @@
 
 @media (max-width: 375px) {
     .card-img-top {
-        height: 165px;
+        height: 158px;
     }
 }
 
