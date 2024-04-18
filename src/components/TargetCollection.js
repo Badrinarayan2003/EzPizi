@@ -21,7 +21,7 @@ function TargetCollection() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '873a98717fmsh70a293fb3ae9fcap179012jsna5c7c20b120e',
+                'X-RapidAPI-Key': '6512c2ececmsh7f5f5839d99ed90p15288cjsn3de76657ab64',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -64,7 +64,7 @@ function TargetCollection() {
                     data.map((product) => {
                         return (
                             <div className="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-6 mb-4 product-box" key={product.asin}>
-                                <div className="card border-0 img-box" onClick={() => { navigate("/singlecard", { state: { key: `${product.asin}` } }) }}>
+                                <div className="card border-0 img-box" onClick={() => { navigate("/singlecard", { state: {product} }) }}>
                                     <img src={product.product_photo} className="card-img-top" alt={product.product_title} />
                                     <a type="button" href='/' className="btn btn-dark fw-bold rounded-pill" id='add-to-cart-btn'>+add to</a>
                                     <div className="card-body product-detail-box">
