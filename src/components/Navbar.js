@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import { useSelector } from 'react-redux';
 
 function Navbar() {
     const [visible, setVisible] = useState(false)
@@ -20,9 +23,22 @@ function Navbar() {
     const handleChange = (evt) => {
         setSearchData(evt.target.value)
     }
-    const handleClick=()=>{
+    const handleClick = () => {
         navigate("/search-result", { state: { searchData } })
+        setSearchData("")
         setVisible(false)
+    }
+
+
+
+    const cart = useSelector((state) => state.cart)
+
+    const getTotalQuantity = () => {
+        let total = 0
+        cart.forEach(item => {
+            total += item.quantity
+        })
+        return total
     }
 
     return (
@@ -35,14 +51,14 @@ function Navbar() {
 
                     <div className="buttons nav-buttons d-flex align-items-center">
                         <a className="btn btn1 border-0 fw-bold" onClick={() => setVisible(!visible)} ><i className="fa fa-solid fa-search me-1"></i></a>
-                        <a href="/" className="btn btn2 border-0"><i className="fa fa-shopping-cart"></i><span></span></a>
+                        <NavLink to="/cart" className="btn btn2 border-0"><i className="fa fa-shopping-cart"></i><span>{getTotalQuantity() || 0}</span></NavLink>
                     </div>
                 </div>
             </nav>
 
             <div className={visible ? "search-form search-show" : "search-form"} id="nav-search">
                 <div className="input-box">
-                    <input type="text" placeholder="Search..." onChange={handleChange} />
+                    <input type="text" placeholder="Search..." value={searchData} onChange={handleChange} />
                     <a onClick={handleClick}><i className="fa fa-solid fa-search"></i></a>
                 </div>
             </div>

@@ -3,6 +3,9 @@ import Loading from "./Loading";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
+
 function SearchResult() {
 
     const navigate = useNavigate();
@@ -21,7 +24,7 @@ function SearchResult() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '6512c2ececmsh7f5f5839d99ed90p15288cjsn3de76657ab64',
+                'X-RapidAPI-Key': '2e950c10demsh5a8d94aedee41d3p140644jsn3525f72f680e',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -57,6 +60,8 @@ function SearchResult() {
     }
 
 
+    const dispatch = useDispatch()
+
     const Card = () => {
         return (
             <>
@@ -64,9 +69,18 @@ function SearchResult() {
                     data.map((product) => {
                         return (
                             < div className="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-6 mb-4 product-box" key={product.asin} >
-                                <div className="card border-0 img-box" onClick={() => { navigate("/singlecard", { state: {product} }) }}>
-                                    <img src={product.product_photo} className="card-img-top" alt={product.product_title} />
-                                    <a type="button" href='/' className="btn btn-dark fw-bold rounded-pill" id='add-to-cart-btn'>+add to</a>
+                                <div className="card border-0 img-box">
+                                    <img src={product.product_photo} className="card-img-top" alt={product.product_title} onClick={() => { navigate("/singlecard", { state: { product } }) }} />
+                                    <a type="button"
+                                        className="btn btn-dark fw-bold rounded-pill"
+                                        id='add-to-cart-btn'
+                                        onClick={() => dispatch(addToCart({
+                                            id: product.asin,
+                                            photo: product.product_photo,
+                                            title: product.product_title,
+                                            price: product.product_price
+                                        }))}
+                                    >+add to</a>
                                     <div className="card-body product-detail-box">
                                         <p className="card-text mb-0 product-title">{product.product_title && product.product_title.substring(0, 35)}..</p>
                                         <p className="rating-icon fw-bold"><i className="fa fa-solid fa-star" style={{ color: '#F0A53D' }}></i> {product.product_star_rating}</p>

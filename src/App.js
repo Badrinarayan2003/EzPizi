@@ -10,7 +10,7 @@ import Footer from './components/Footer.js';
 import TargetCollection from './components/TargetCollection.js';
 import Singlecard from './components/Singlecard.js';
 import SearchResult from './components/SearchResult.js';
-
+import Cart from './components/Cart.js';
 
 
 function App() {
@@ -22,8 +22,9 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/targetcollection' element={<TargetCollection />} />
-          <Route path='/singlecard' element={<Singlecard/>}/>
-          <Route path='/search-result' element={<SearchResult/>}/>
+          <Route path='/singlecard' element={<Singlecard />} />
+          <Route path='/search-result' element={<SearchResult />} />
+          <Route path='/cart' element={<Cart/>} />
         </Routes>
 
         <Contact />

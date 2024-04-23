@@ -1,6 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-// import SingleProductLoader from './SingleProductLoader';
+
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
 
 function Singlecard() {
 
@@ -24,12 +26,12 @@ function Singlecard() {
     const cardData = location.state
     const data = cardData.product
 
-
     let price = data.product_price ? Number(data.product_price.replace('₹', '').replace(',', '')) : "";
     let originalPrice = data.product_original_price ? Number(data.product_original_price.replace('₹', '').replace(',', '')) : "";
 
     let offer = price / originalPrice * 100
 
+    const dispatch = useDispatch()
 
     return (
         <div className="singlecard-section">
@@ -66,7 +68,16 @@ function Singlecard() {
                                     </div>
                                 </div>
                                 <div className='single-card-bnt-box my-4 d-flex gap-3'>
-                                    <a href='/' className='btn border rounded-pill  fw-bold'>Add to cart</a>
+                                    <a className='btn border rounded-pill fw-bold'
+                                        onClick={() =>
+                                            dispatch(addToCart({
+                                                id: data.asin,
+                                                photo: data.product_photo,
+                                                title: data.product_title,
+                                                price: data.product_price
+                                            }))
+                                        }
+                                    >Add to cart</a>
                                     <a href='/' className='btn  rounded-pill fw-bold'>Buy now</a>
                                 </div>
 
@@ -74,7 +85,7 @@ function Singlecard() {
                         </div>
                     </div>
                 </div>
-                {/* <div className='single-card-description my-3'>
+                {/* <div className='single-card-description my-3 bg-primary'>
                     <p className='mb-0 fw-bold'>Description:</p>
                     <p className='px-5'>{data.product_description}</p>
                 </div> */}
