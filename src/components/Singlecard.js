@@ -74,7 +74,8 @@ function Singlecard() {
                                                 id: data.asin,
                                                 photo: data.product_photo,
                                                 title: data.product_title,
-                                                price: data.product_price
+                                                price: data.product_price,
+                                                quantity:count
                                             }))
                                         }
                                     >Add to cart</a>

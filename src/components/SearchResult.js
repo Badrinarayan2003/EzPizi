@@ -24,7 +24,7 @@ function SearchResult() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '2e950c10demsh5a8d94aedee41d3p140644jsn3525f72f680e',
+                'X-RapidAPI-Key': 'd22dcf943fmsh268478ffe2e15d5p17892ejsn4ff503dd50aa',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -78,7 +78,8 @@ function SearchResult() {
                                             id: product.asin,
                                             photo: product.product_photo,
                                             title: product.product_title,
-                                            price: product.product_price
+                                            price: product.product_price,
+                                            quantity: 1
                                         }))}
                                     >+add to</a>
                                     <div className="card-body product-detail-box">

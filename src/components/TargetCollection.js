@@ -23,7 +23,7 @@ function TargetCollection() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '2e950c10demsh5a8d94aedee41d3p140644jsn3525f72f680e',
+                'X-RapidAPI-Key': 'd22dcf943fmsh268478ffe2e15d5p17892ejsn4ff503dd50aa',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -77,7 +77,8 @@ function TargetCollection() {
                                             id: product.asin,
                                             photo: product.product_photo,
                                             title: product.product_title,
-                                            price: product.product_price
+                                            price: product.product_price,
+                                            quantity:1
                                         }))}
                                     >+add to</a>
                                     <div className="card-body product-detail-box">
@@ -115,14 +116,14 @@ function TargetCollection() {
                 </div>
                 <nav aria-label="Page navigation example ">
                     <ul className="pagination justify-content-center" style={{ marginBottom: '0rem', paddingBottom: '1rem' }}>
-                        <li className="page-item">
+                        <li className="page-item page-indicator">
                             <a className="page-link" aria-label="Previous" onClick={handleDecrement}>
                                 <i className="fa fa-sharp fa-light fa-arrow-left text-dark"></i>
                             </a>
                         </li>
                         <li className="page-item"><span className="page-link text-dark">1</span></li>
                         <li className="page-item"><span className="page-link text-dark">2</span></li>
-                        <li className="page-item">
+                        <li className="page-item page-indicator">
                             <a className="page-link" aria-label="Next" onClick={handleIncrement}>
                                 <i className="fa fa-sharp fa-light fa-arrow-right text-dark"></i>
                             </a>
