@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { incrementQuantity, decrementQuantity, removeItem } from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
-
+import { NavLink } from 'react-router-dom'
 
 function Cart() {
 
@@ -83,7 +83,7 @@ function Cart() {
                                 </div>
                                 <p className="text-center checkout-text">Taxes and shipping calculated at checkout</p>
                                 <div className="checkout-btn-box">
-                                    <a href="#" className="btn btn-dark rounded-pill fw-bold">Check Out</a>
+                                    <NavLink to="/billing" className="btn btn-dark rounded-pill fw-bold">Check Out</NavLink>
                                 </div>
                             </div>
                         </div>

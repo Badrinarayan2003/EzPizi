@@ -11,6 +11,7 @@ import TargetCollection from './components/TargetCollection.js';
 import Singlecard from './components/Singlecard.js';
 import SearchResult from './components/SearchResult.js';
 import Cart from './components/Cart.js';
+import Billing from './components/Billing.js';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/singlecard' element={<Singlecard />} />
           <Route path='/search-result' element={<SearchResult />} />
           <Route path='/cart' element={<Cart/>} />
+          <Route path='/billing' element={<Billing/>} />
         </Routes>
 
         <Contact />

@@ -36,6 +36,11 @@
     position: relative;
     top: -0.6rem;
     left: 1.5px;
+    background-color: red;
+    padding: 1.5px 4px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 600;
 }
 
 .search-form {
@@ -411,7 +416,8 @@
     margin-bottom: 2rem;
     font-size: 3rem;
 }
-.cart-heading{
+
+.cart-heading {
     border-bottom: 1px solid darkgray;
 }
 
@@ -467,6 +473,7 @@
 
 .checkout-btn-box .btn {
     display: inherit;
+    padding: 0.8rem;
 }
 
 #estimate-btn {
@@ -480,6 +487,39 @@
 .estim-bg #floatingSelectGrid,
 #floatingInput {
     background-color: gainsboro;
+    border: 1px solid darkgray;
+    outline: none;
+}
+
+/* billing section  */
+.billing-section {
+    padding-top: 6.5rem;
+    background-color: rgb(235, 236, 236);
+
+}
+
+.payment-detail-box {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+.payment-heading,
+.payment-sub-total,
+.payment-grand-total {
+    border-bottom: 1px solid gainsboro;
+}
+
+.pay-button a {
+    display: inherit;
+}
+
+.pay-add-input input {
+    background-color: rgb(235, 236, 236);
+    border: 1px solid darkgray;
+    outline: none;
+}
+.pay-add-input select, option {
+    background-color: rgb(235, 236, 236);
     border: 1px solid darkgray;
     outline: none;
 }
