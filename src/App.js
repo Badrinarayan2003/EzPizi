@@ -25,10 +25,9 @@ function App() {
           <Route path='/targetcollection' element={<TargetCollection />} />
           <Route path='/singlecard' element={<Singlecard />} />
           <Route path='/search-result' element={<SearchResult />} />
-          <Route path='/cart' element={<Cart/>} />
-          <Route path='/billing' element={<Billing/>} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/billing' element={<Billing />} />
         </Routes>
-
         <Contact />
         <Information />
         <Footer />

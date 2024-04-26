@@ -23,7 +23,7 @@ function TargetCollection() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'd22dcf943fmsh268478ffe2e15d5p17892ejsn4ff503dd50aa',
+                'X-RapidAPI-Key': '126f77bb06msh7303109498191aep10fbb9jsn45d27b87a838',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };

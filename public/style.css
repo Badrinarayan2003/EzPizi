@@ -37,7 +37,7 @@
     top: -0.6rem;
     left: 1.5px;
     background-color: red;
-    padding: 1.5px 4px;
+    padding: 1.1px 4.5px;
     border-radius: 50%;
     color: #fff;
     font-weight: 600;
@@ -518,7 +518,9 @@
     border: 1px solid darkgray;
     outline: none;
 }
-.pay-add-input select, option {
+
+.pay-add-input select,
+option {
     background-color: rgb(235, 236, 236);
     border: 1px solid darkgray;
     outline: none;
