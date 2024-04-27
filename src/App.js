@@ -12,9 +12,6 @@ import Singlecard from './components/Singlecard.js';
 import SearchResult from './components/SearchResult.js';
 import Cart from './components/Cart.js';
 import Billing from './components/Billing.js';
-import Product from './components/Product.js';
-import Collections from './components/Collections.js';
-
 
 
 function App() {
@@ -31,8 +28,6 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/billing' element={<Billing />} />
         </Routes>
-        <Collections/>
-        <Product />
         <Contact />
         <Information />
         <Footer />

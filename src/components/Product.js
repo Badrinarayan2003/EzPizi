@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Loading from './Loading'
-import Collections from './Collections'
 import { useNavigate } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
@@ -9,6 +8,7 @@ import { addToCart } from '../redux/cartSlice';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Collections from './Collections';
 
 
 function Product() {
@@ -154,6 +154,7 @@ function Product() {
 
     return (
         <div className="product-section pb-4 overflow-hidden">
+            <Collections/>
             <div className="row">
                 {loading ? (<Loading />) : (<ProductCard />)}
                 {errorMsg && (<p className='fs-2 fw-bold text-center'>An error occurred while fetching data.</p>)}

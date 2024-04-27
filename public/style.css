@@ -126,10 +126,6 @@
 }
 
 /* PRODUCT SECTION  */
-.product-section {
-    background-color: rgb(235, 236, 236);
-}
-
 .img-box {
     width: 100%;
     border-radius: 10px;
@@ -277,10 +273,6 @@
 
 /* COLLECTION SECTION  */
 .product-collec-section {
-    background-color: rgb(235, 236, 236);
-}
-
-.collection-section {
     background-color: rgb(235, 236, 236);
 }
 
