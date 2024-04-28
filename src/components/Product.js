@@ -8,8 +8,9 @@ import { addToCart } from '../redux/cartSlice';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Collections from './Collections';
 
+import Collections from './Collections';
+import Category from './Category';
 
 function Product() {
 
@@ -22,12 +23,12 @@ function Product() {
 
     const getData = async () => {
 
-        const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=newarrival&page=2&country=IN&category_id=aps`;
+        const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=oversize-printed-tshirts-hoodies-jackets&page=2&country=IN&category_id=aps`;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
-                // 'X-RapidAPI-Key': '953f6e56bamshd491a48c50bc4e2p108b88jsn9f9c15dc3e91',
+                // 'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
+                'X-RapidAPI-Key': 'ddca188a58mshd0915e668d7ff15p105186jsn898f2f1b63db',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -156,8 +157,12 @@ function Product() {
     return (
         <div className="product-section pb-4 overflow-hidden">
             <Collections />
+            <Category />
             <div className="row">
                 <h1 className="fw-bold py-3 text-center">Featured Products</h1>
+                <div className="px-4">
+                    <p className="text-end text-decoration-underline">Swipe <i class="fa fa-light fa-arrow-right"></i></p>
+                </div>
                 {loading ? (<Loading />) : (<ProductCard />)}
                 {errorMsg && (<p className='fs-2 fw-bold text-center'>An error occurred while fetching data.</p>)}
             </div>

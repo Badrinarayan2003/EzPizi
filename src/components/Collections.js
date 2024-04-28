@@ -68,7 +68,7 @@ function Collections() {
 
     return (
         <div className="collection-section overflow-hidden">
-            <h1 className="border-bottom border-light my-3 text-dark fw-bold text-center">Our Collections</h1>
+            <h1 className="my-3 text-dark fw-bold text-center">Our Collections</h1>
             <div className="collection-container py-2 px-4">
                 <div className="slider-container">
                     <Slider {...settings}>
@@ -146,7 +146,7 @@ function Collections() {
                                 }}>
                                 <img src="/images/electronic_bg.jpg" className="d-block " alt="iphone" style={{ width: '100%', height: '180px' }} />
                                 <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">iphone</h5>
+                                    <h5 class="card-title collection-text">Electronics</h5>
                                 </div>
                             </div>
                         </div>

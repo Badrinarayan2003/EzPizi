@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 import { useSelector } from 'react-redux';
+import Header from "./Header";
 
 function Navbar() {
     const [visible, setVisible] = useState(false)
@@ -10,7 +11,7 @@ function Navbar() {
     const [color, setColor] = useState(false)
 
     const handleColor = () => {
-        if (window.scrollY >= 180) {
+        if (window.scrollY >= 200) {
             setColor(true)
         } else {
             setColor(false)
@@ -23,12 +24,13 @@ function Navbar() {
     const handleChange = (evt) => {
         setSearchData(evt.target.value)
     }
+
     const handleClick = () => {
         if (searchData) {
             navigate("/search-result", { state: { searchData } });
             setSearchData("");
             setVisible(false);
-        }else{
+        } else {
             setVisible(false)
         }
     }

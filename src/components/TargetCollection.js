@@ -23,8 +23,8 @@ function TargetCollection() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
-                // 'X-RapidAPI-Key': '953f6e56bamshd491a48c50bc4e2p108b88jsn9f9c15dc3e91',
+                // 'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
+                'X-RapidAPI-Key': 'ddca188a58mshd0915e668d7ff15p105186jsn898f2f1b63db',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -79,7 +79,7 @@ function TargetCollection() {
                                             photo: product.product_photo,
                                             title: product.product_title,
                                             price: product.product_price,
-                                            quantity:1
+                                            quantity: 1
                                         }))}
                                     >+add to</a>
                                     <div className="card-body product-detail-box">

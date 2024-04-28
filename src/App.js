@@ -12,12 +12,14 @@ import Singlecard from './components/Singlecard.js';
 import SearchResult from './components/SearchResult.js';
 import Cart from './components/Cart.js';
 import Billing from './components/Billing.js';
+import Header from './components/Header.js';
 
 
 function App() {
   return (
     <Router>
       <>
+        <Header />
         <Navbar />
 
         <Routes>

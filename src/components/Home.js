@@ -13,7 +13,17 @@ function Home() {
                     <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div className="carousel-inner">
-                    <div className="carousel-item active slider-cotent-box">
+                    <div className="carousel-item active slider-cotent-box" >
+                        <img src="/images/hero_img3.jpg" className="d-block w-100" alt="womens_bg" />
+                        <div className="carousel-caption d-block d-md-block" id="hero-content-box">
+                            <h2>Women's Style Fusion</h2>
+                            <a type="button"
+                                onClick={() => { navigate("/targetcollection", { state: { img: '/images/womens_bg.jpg', searchKey: "womensfashion", title: "For Womens" } }) }}
+                                className="btn btn-light border fw-bold rounded-pill"
+                            >Explore</a>
+                        </div>
+                    </div>
+                    <div className="carousel-item slider-cotent-box">
                         <img src="/images/hero_img5.jpg" className="d-block w-100" alt="mens_bg" />
                         <div className="carousel-caption d-block d-md-block" id="hero-content-box">
                             <h2>Elevate Your Style Today!</h2>
@@ -23,16 +33,7 @@ function Home() {
                             >Shop</a>
                         </div>
                     </div>
-                    <div className="carousel-item slider-cotent-box" >
-                        <img src="/images/hero_img3.jpg" className="d-block w-100" alt="womens_bg" />
-                        <div className="carousel-caption d-block d-md-block" id="hero-content-box">
-                            <h2>Exclusive Deals for Women's</h2>
-                            <a type="button"
-                                onClick={() => { navigate("/targetcollection", { state: { img: '/images/womens_bg.jpg', searchKey: "womensfashion", title: "For Womens" } }) }}
-                                className="btn btn-light border fw-bold rounded-pill"
-                            >Explore</a>
-                        </div>
-                    </div>
+
                     <div className="carousel-item slider-cotent-box" >
                         <img src="/images/hero_img8.jpg" className="d-block w-100" alt="new_arrival_bg" />
                         <div className="carousel-caption d-block d-md-block" id="hero-content-box">
@@ -44,7 +45,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Product/>
+            <Product />
         </div>
     )
 }
