@@ -27,7 +27,7 @@
 
 /* NAVBAR  */
 .navbar {
-    height: 17vh;
+    height: 15vh;
     z-index: 100;
     top: 40px;
     transition: .3s ease-in;
@@ -402,7 +402,7 @@
 }
 
 .search-result-section .container {
-    padding-top: 7rem;
+    padding-top: 8rem;
 }
 
 .search-box {
@@ -733,7 +733,7 @@ option {
 
     /* HERO  */
     #hero-content-box {
-        bottom: 3.5rem;
+        bottom: 2rem;
     }
 
     #hero-content-box h2 {
@@ -741,7 +741,7 @@ option {
     }
 
     #hero-content-box a {
-        padding: 0.4rem 1.3rem;
+        padding: 0.25rem 1rem;
     }
 
     /* PRODUCT  */
