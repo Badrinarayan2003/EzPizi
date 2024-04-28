@@ -24,9 +24,13 @@ function Navbar() {
         setSearchData(evt.target.value)
     }
     const handleClick = () => {
-        navigate("/search-result", { state: { searchData } })
-        setSearchData("")
-        setVisible(false)
+        if (searchData) {
+            navigate("/search-result", { state: { searchData } });
+            setSearchData("");
+            setVisible(false);
+        }else{
+            setVisible(false)
+        }
     }
 
 

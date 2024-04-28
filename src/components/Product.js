@@ -27,6 +27,7 @@ function Product() {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
+                // 'X-RapidAPI-Key': '953f6e56bamshd491a48c50bc4e2p108b88jsn9f9c15dc3e91',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -51,33 +52,7 @@ function Product() {
 
 
     const ProductCard = () => {
-        const [slidesToShow, setSlidesToShow] = useState(4);
         const [isSwiping, setIsSwiping] = useState(false);
-
-        useEffect(() => {
-            const handleResize = () => {
-                if (window.innerWidth >= 1060) {
-                    setSlidesToShow(4);
-                } else if (window.innerWidth >= 688) {
-                    setSlidesToShow(3);
-                } else if (window.innerWidth >= 440) {
-                    setSlidesToShow(2);
-                } else {
-                    setSlidesToShow(1);
-                }
-            };
-
-            // Initial call to set initial state
-            handleResize();
-
-            // Event listener for window resize
-            window.addEventListener("resize", handleResize);
-
-            // Remove event listener on component unmount
-            return () => {
-                window.removeEventListener("resize", handleResize);
-            };
-        }, []);
 
 
         const handleSwipeStart = () => {
@@ -99,15 +74,41 @@ function Product() {
             className: "center",
             infinite: false,
             centerPadding: "60px",
-            slidesToShow: slidesToShow,
+            slidesToShow: 4,
             swipeToSlide: true,
             beforeChange: handleSwipeStart,
-            afterChange: handleSwipeEnd
+            afterChange: handleSwipeEnd,
+            responsive: [
+                {
+                    breakpoint: 1060,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: false,
+                    }
+                },
+                {
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: false,
+                    }
+                },
+                {
+                    breakpoint: 440,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: false,
+                    }
+                },
+
+            ]
         };
 
         return (
             <>
-                <h1 className="fw-bold py-3 text-center">Featured Products</h1>
                 <div className="mx-2">
                     <Slider {...settings}>
                         {
@@ -154,8 +155,9 @@ function Product() {
 
     return (
         <div className="product-section pb-4 overflow-hidden">
-            <Collections/>
+            <Collections />
             <div className="row">
+                <h1 className="fw-bold py-3 text-center">Featured Products</h1>
                 {loading ? (<Loading />) : (<ProductCard />)}
                 {errorMsg && (<p className='fs-2 fw-bold text-center'>An error occurred while fetching data.</p>)}
             </div>
