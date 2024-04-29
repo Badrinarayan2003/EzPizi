@@ -13,7 +13,9 @@ import SearchResult from './components/SearchResult.js';
 import Cart from './components/Cart.js';
 import Billing from './components/Billing.js';
 import Header from './components/Header.js';
-
+import FaQs from './components/FaQs.js';
+import ProductSatisfaction from './components/ProductSatisfaction.js';
+import MiddleBanner from './components/MiddleBanner.js';
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/billing' element={<Billing />} />
         </Routes>
+
+        <FaQs />
+        <ProductSatisfaction />
+        <MiddleBanner />
         <Contact />
         <Information />
         <Footer />

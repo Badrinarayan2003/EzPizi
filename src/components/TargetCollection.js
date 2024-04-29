@@ -23,8 +23,9 @@ function TargetCollection() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
-                // 'X-RapidAPI-Key': 'ddca188a58mshd0915e668d7ff15p105186jsn898f2f1b63db',
+                'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
+                // 'X-RapidAPI-Key': '3ef652fb5dmsh1d8bf2f85b2e18fp152748jsn394c93d990af',
+                // 'X-RapidAPI-Key': 'c687b02857msh4815b5f5669a958p15246ejsn35480bb9693f',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
