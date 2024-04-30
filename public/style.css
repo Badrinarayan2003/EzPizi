@@ -161,7 +161,33 @@
 }
 
 /* CATEGORY SECTION  */
+.category-box {
+    height: 40vh;
+}
 
+.category-box-one {
+    height: 100%;
+    background-image: url("/images/mens_cat.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.category-box-two {
+    height: 100%;
+    background-image: url("/images/arrival_cat.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.category-box-three {
+    height: 100%;
+    background-image: url("/images/womens_cat.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
 
 /* PRODUCT SECTION  */
 .img-box {
@@ -287,23 +313,19 @@
 }
 
 /* FOOTER SECTION  */
-
-.footer-section {
-    padding: 3rem;
+.footer-bottom-box-two {
+    width: 100%;
+    justify-content: end;
 }
 
-.footer-add {
-    padding: 1rem;
+.social-icon {
+    width: 6%;
+    height: 4.5vh;
+    border-radius: 50%;
+    background: #15cefc;
+    margin-right: .7rem;
+    cursor: pointer;
 }
-
-.footer-add h3 {
-    font-size: 1.35rem;
-}
-
-.footer-copy-right {
-    font-size: 0.9rem;
-}
-
 
 /* SINGLE CARD  */
 .singlecard-section {
@@ -578,7 +600,7 @@ option {
 /* Product satisfaction section  */
 .product-satisfaction-section {
     padding: 2rem 0;
-    background: linear-gradient(0deg, rgba(87, 93, 93, 1) 21%, rgba(25, 21, 21, 1) 94%);
+    background: linear-gradient(0deg, rgba(87, 93, 93, 1) 45%, rgba(25, 21, 21, 1) 94%);
 }
 
 .product-satisfaction-section .container h1 {
@@ -616,13 +638,15 @@ option {
     }
 }
 
-@media(max-width:992px) {
+@media(max-width:1130px) {
 
-
-    .collec-text-box h4 {
-        font-size: 1rem;
+    /* footer  */
+    .social-icon {
+        width: 7%;
     }
+}
 
+@media(max-width:992px) {
     .card-img-top {
         height: 270px;
     }
@@ -651,6 +675,11 @@ option {
 
     #checkout-box {
         padding: 0.5rem;
+    }
+
+    /* footer  */
+    .social-icon {
+        width: 9%;
     }
 }
 
@@ -758,6 +787,25 @@ option {
         font-size: 1.5rem;
     }
 
+    /* footer  */
+    .footer-bottom-box-two {
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 5%;
+    }
+
+    .footer-copy-right {
+        text-align: center;
+    }
+
+}
+
+@media(max-width:545px) {
+    .social-icon {
+        width: 6%;
+    }
 }
 
 @media(max-width:599px) {
@@ -787,14 +835,6 @@ option {
         font-size: 0.8rem;
     }
 
-    /* category section  */
-    .category-text-box h5 {
-        font-size: 0.8rem;
-    }
-
-    .category-text-box a {
-        font-size: 0.7rem;
-    }
 }
 
 @media(min-width:425px) {
@@ -937,6 +977,11 @@ option {
     #featured-card-img {
         height: 270px;
     }
+
+    /* footer  */
+    .social-icon {
+        width: 8%;
+    }
 }
 
 @media (max-width: 375px) {
@@ -958,6 +1003,10 @@ option {
         height: 240px;
     }
 
+    /* FOOTER  */
+    .social-icon {
+        width: 9%;
+    }
 }
 
 @media (max-width: 576px) {

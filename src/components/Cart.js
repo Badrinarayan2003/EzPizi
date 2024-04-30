@@ -96,7 +96,7 @@ function Cart() {
                         <div className="accordion accordion-flush" id="accordionFlushExample">
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="flush-headingOne">
-                                    <button className="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style={{ backgroundColor: 'gainsboro',boxShadow:'none' }}>
+                                    <button className="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style={{ backgroundColor: 'gainsboro', boxShadow: 'none' }}>
                                         Shipping Estimation
                                     </button>
                                 </h2>
