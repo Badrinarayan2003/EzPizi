@@ -73,80 +73,80 @@ function Collections() {
                 <div className="slider-container">
                     <Slider {...settings}>
                         <div>
-                            <div class="card text-white"
+                            <div className="card text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/mens_bg.jpg', searchKey: "menswear", title: "For Mens" } })
                                     }
                                 }}>
                                 <img src="/images/mens_bg.jpg" className="d-block " alt="mens" style={{ width: '100%', height: '180px' }} />
-                                <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">Mens Fashion</h5>
+                                <div className="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
+                                    <h5 className="card-title collection-text">Mens Fashion</h5>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="card  text-white"
+                            <div className="card  text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/womens_bg.jpg', searchKey: "womenswear", title: "For Womens" } })
                                     }
                                 }}>
                                 <img src="/images/womens_bg.jpg" className="d-block " alt="mens" style={{ width: '100%', height: '180px' }} />
-                                <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">Womens Fashion</h5>
+                                <div className="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
+                                    <h5 className="card-title collection-text">Womens Fashion</h5>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="card  text-white"
+                            <div className="card  text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/iphone_bg.jpeg', searchKey: "iphone", title: "iPhone" } })
                                     }
                                 }}>
                                 <img src="/images/iphone_bg.jpeg" className="d-block " alt="iphone" style={{ width: '100%', height: '180px' }} />
-                                <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">iphone</h5>
+                                <div className="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
+                                    <h5 className="card-title collection-text">iphone</h5>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="card  text-white"
+                            <div className="card  text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/watch_bg.jpeg', searchKey: "watch", title: "Watches" } })
                                     }
                                 }}>
                                 <img src="/images/watch_bg.jpeg" className="d-block" alt="electronic" style={{ width: '100%', height: '180px' }} />
-                                <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">Watches</h5>
+                                <div className="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
+                                    <h5 className="card-title collection-text">Watches</h5>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="card  text-white"
+                            <div className="card  text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/jewellery_bg.jpg', searchKey: "jewellery", title: "Jewellery" } })
                                     }
                                 }}>
                                 <img src="/images/jewellery_bg.jpg" className="d-block " alt="womens" style={{ width: '100%', height: '180px' }} />
-                                <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">Jewelleries</h5>
+                                <div className="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
+                                    <h5 className="card-title collection-text">Jewelleries</h5>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="card  text-white"
+                            <div className="card  text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/electronic_bg.jpg', searchKey: "electronics", title: "Electronics" } })
                                     }
                                 }}>
                                 <img src="/images/electronic_bg.jpg" className="d-block " alt="iphone" style={{ width: '100%', height: '180px' }} />
-                                <div class="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
-                                    <h5 class="card-title collection-text">Electronics</h5>
+                                <div className="card-img-overlay d-flex justify-content-center align-items-center collection-text-box">
+                                    <h5 className="card-title collection-text">Electronics</h5>
                                 </div>
                             </div>
                         </div>

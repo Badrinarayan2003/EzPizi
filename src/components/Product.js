@@ -27,7 +27,8 @@ function Product() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
+                'X-RapidAPI-Key': '709fd0d32cmsh1157e43b30dc5d6p15391djsn29376f1390aa',
+                // 'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -63,9 +64,9 @@ function Product() {
             setIsSwiping(false);
         };
 
-        const handleCardClick = (product) => {
+        const handleCardClick = (id) => {
             if (!isSwiping) {
-                navigate('/singlecard', { state: { product } });
+                navigate('/singlecard', { state: id });
             }
         };
 
@@ -121,7 +122,7 @@ function Product() {
                                                 className="card-img-top"
                                                 id="featured-card-img"
                                                 alt={product.product_title}
-                                                onClick={() => handleCardClick(product)}
+                                                onClick={() => handleCardClick(product.asin)}
                                             />
                                             <a type="button"
                                                 className="btn btn-dark fw-bold rounded-pill"
@@ -137,7 +138,7 @@ function Product() {
                                                 }
                                             >+add to</a>
                                             <div className="card-body product-detail-box">
-                                                <p className="card-text mb-0 product-title">{product.product_title && product.product_title.substring(0, 35)}..</p>
+                                                <p className="card-text mb-0 product-title">{product.product_title && product.product_title.substring(0, 35)}{product.asin}..</p>
                                                 <p className="rating-icon fw-bold"><i className="fa fa-solid fa-star" style={{ color: '#F0A53D' }}></i> {product.product_star_rating}</p>
                                                 <h6 className="card-title fw-bold fs-5">Rs {product.product_price && product.product_price.slice(1)}</h6>
                                             </div>
@@ -160,7 +161,7 @@ function Product() {
             <div className="row">
                 <h1 className="fw-bold py-3 text-center">Featured Products</h1>
                 <div className="px-4">
-                    <p className="text-end text-decoration-underline">Swipe <i class="fa fa-light fa-arrow-right"></i></p>
+                    <p className="text-end text-decoration-underline">Swipe <i className="fa fa-light fa-arrow-right"></i></p>
                 </div>
                 {loading ? (<Loading />) : (<ProductCard />)}
                 {errorMsg && (<p className='fs-2 fw-bold text-center'>An error occurred while fetching data.</p>)}

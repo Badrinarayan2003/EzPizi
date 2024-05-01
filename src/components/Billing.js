@@ -21,38 +21,38 @@ function Billing() {
                 <div className="row">
                     <div className="col-md-8 my-4 payment-detail-box">
                         <h3 className="fw-bold text-center payment-heading">Delivery Address</h3>
-                        <form class="row g-3 needs-validation" novalidate>
-                            <div class="col-md-4 pay-add-input">
-                                <label for="validationCustom01" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="Full Name" required />
-                                <div class="valid-feedback">
+                        <form className="row g-3 needs-validation" novalidate>
+                            <div className="col-md-4 pay-add-input">
+                                <label for="validationCustom01" className="form-label">Name</label>
+                                <input type="text" className="form-control" id="validationCustom01" placeholder="Full Name" required />
+                                <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
-                            <div class="col-md-4 pay-add-input">
-                                <label for="validationCustom02" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="validationCustom02" placeholder="Email" required />
-                                <div class="valid-feedback">
+                            <div className="col-md-4 pay-add-input">
+                                <label for="validationCustom02" className="form-label">Email</label>
+                                <input type="email" className="form-control" id="validationCustom02" placeholder="Email" required />
+                                <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
-                            <div class="col-md-4 pay-add-input">
-                                <label for="validationCustom02" class="form-label">Phone</label>
-                                <input type="number" class="form-control" id="validationCustom02" placeholder="Phone" required />
-                                <div class="valid-feedback">
+                            <div className="col-md-4 pay-add-input">
+                                <label for="validationCustom02" className="form-label">Phone</label>
+                                <input type="number" className="form-control" id="validationCustom02" placeholder="Phone" required />
+                                <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
-                            <div class="col-md-6 pay-add-input">
-                                <label for="validationCustom03" class="form-label">City</label>
-                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required />
-                                <div class="invalid-feedback">
+                            <div className="col-md-6 pay-add-input">
+                                <label for="validationCustom03" className="form-label">City</label>
+                                <input type="text" className="form-control" id="validationCustom03" placeholder="City" required />
+                                <div className="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
-                            <div class="col-md-3 pay-add-input">
-                                <label for="validationCustom04" class="form-label">State</label>
-                                <select class="form-select " id="validationCustom04" required>
+                            <div className="col-md-3 pay-add-input">
+                                <label for="validationCustom04" className="form-label">State</label>
+                                <select className="form-select " id="validationCustom04" required>
                                     <option selected value="">Odisha</option>
                                     <option>Hydrabad</option>
                                     <option>maharastra</option>
@@ -60,30 +60,30 @@ function Billing() {
                                     <option>delhi</option>
                                     <option>kolkata</option>
                                 </select>
-                                <div class="invalid-feedback">
+                                <div className="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
-                            <div class="col-md-3 pay-add-input">
-                                <label for="validationCustom05" class="form-label">Zip</label>
-                                <input type="number" class="form-control" id="validationCustom05" required />
-                                <div class="invalid-feedback">
+                            <div className="col-md-3 pay-add-input">
+                                <label for="validationCustom05" className="form-label">Zip</label>
+                                <input type="number" className="form-control" id="validationCustom05" required />
+                                <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input class="form-check-input text-light bg-dark" type="checkbox" value="" id="invalidCheck" required />
-                                    <label class="form-check-label" for="invalidCheck">
+                            <div className="col-12">
+                                <div className="form-check">
+                                    <input className="form-check-input text-light bg-dark" type="checkbox" value="" id="invalidCheck" required />
+                                    <label className="form-check-label" for="invalidCheck">
                                         Agree to terms and conditions
                                     </label>
-                                    <div class="invalid-feedback">
+                                    <div className="invalid-feedback">
                                         You must agree before submitting.
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button class="btn btn-dark fw-bold my-2" type="submit">Save</button>
+                            <div className="col-12">
+                                <button className="btn btn-dark fw-bold my-2" type="submit">Save</button>
                             </div>
                         </form>
                     </div>
@@ -113,16 +113,16 @@ function Billing() {
                         </div>
                         <p className="fw-bold text-center">Pay Using UPI</p>
                         <div className="payment-option-box">
-                            <div class="input-group mb-2 pay-add-input">
-                                <input type="text" class="form-control border" placeholder="Enter UPI" aria-label="Text input with segmented dropdown button" required />
-                                <button type="button" class="btn border">Action</button>
-                                <button type="button" class="btn border dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="visually-hidden">Toggle Dropdown</span>
+                            <div className="input-group mb-2 pay-add-input">
+                                <input type="text" className="form-control border" placeholder="Enter UPI" aria-label="Text input with segmented dropdown button" required />
+                                <button type="button" className="btn border">Action</button>
+                                <button type="button" className="btn border dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span className="visually-hidden">Toggle Dropdown</span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another</a></li>
-                                    <li><a class="dropdown-item" href="#">Something</a></li>
+                                <ul className="dropdown-menu dropdown-menu-end">
+                                    <li><a className="dropdown-item" href="#">Action</a></li>
+                                    <li><a className="dropdown-item" href="#">Another</a></li>
+                                    <li><a className="dropdown-item" href="#">Something</a></li>
                                 </ul>
                             </div>
                         </div>

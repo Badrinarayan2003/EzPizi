@@ -22,9 +22,9 @@ function Footer() {
                 </div>
                 <div className="col-md-5">
                     <div className="footer-bottom-box-two d-flex">
-                        <div className="social-icon d-flex justify-content-center align-items-center rounded-circle"><i class="fa fa-brands fa-instagram"></i></div>
-                        <div className="social-icon d-flex justify-content-center align-items-center rounded-circle"><i class="fa fa-brands fa-linkedin"></i></div>
-                        <div className="social-icon d-flex justify-content-center align-items-center rounded-circle"><i class="fa fa-brands fa-twitter"></i></div>
+                        <div className="social-icon d-flex justify-content-center align-items-center rounded-circle"><i className="fa fa-brands fa-instagram"></i></div>
+                        <div className="social-icon d-flex justify-content-center align-items-center rounded-circle"><i className="fa fa-brands fa-linkedin"></i></div>
+                        <div className="social-icon d-flex justify-content-center align-items-center rounded-circle"><i className="fa fa-brands fa-twitter"></i></div>
                     </div>
                 </div>
             </div>

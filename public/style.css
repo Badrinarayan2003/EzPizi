@@ -334,14 +334,13 @@
     background-color: rgb(235, 236, 236);
 }
 
-.single-img-box {
-    padding: 0.3rem;
-    text-align: center;
+.single-card-img {
+    padding: 1rem;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
 }
 
 .single-card-body .card-text {
-    font-size: 1.5rem;
-    font-weight: 600;
     margin-bottom: 0;
 }
 
@@ -356,11 +355,11 @@
 .price-box .off {
     padding: 0.08rem 0.7rem;
     font-size: 0.9rem;
-    background-color: red;
+    background-color: #15cefc;
 }
 
 .price-box .off:hover {
-    background-color: red;
+    background-color: #15cefc;
 }
 
 .price-box .btn span {
@@ -369,10 +368,6 @@
 
 .price-box p:nth-of-type(2) {
     text-decoration: line-through;
-}
-
-.size-chart-box .size {
-    margin-bottom: 0.3rem;
 }
 
 .size-chart p {
@@ -384,10 +379,6 @@
 .size-chart p:hover {
     scale: 1.2;
     font-weight: 600;
-}
-
-.single-count-box .quantity {
-    margin-bottom: 0.3rem;
 }
 
 .single-count-box .count p:nth-of-type(2) {
@@ -415,7 +406,15 @@
 }
 
 .single-card-bnt-box a:nth-of-type(2) {
-    background-color: red;
+    background-color: #15cefc;
+}
+
+/* new */
+.single-card-sm-img img {
+    height: 10vh;
+    width: 50%;
+    margin: auto;
+    border: 1px solid gray;
 }
 
 /* SEARCH RESULT  */
@@ -683,6 +682,12 @@ option {
     }
 }
 
+@media(max-width:898px) {
+    .single-card-sm-img img {
+        width: 55%;
+    }
+}
+
 @media(min-width:768px) {
 
     /* collection section  */
@@ -762,7 +767,7 @@ option {
 
     /* SINGLE CARD  */
     .single-card-body .card-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .price-box .price {
@@ -771,6 +776,14 @@ option {
 
     .price-box .btn {
         font-size: 0.7rem;
+    }
+
+    .single-card-sm-img img {
+        width: 75%;
+    }
+
+    .single-card-img {
+        border: none;
     }
 
     /* cart section  */
@@ -905,7 +918,15 @@ option {
     }
 
     .single-card-body .card-text {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .single-card-sm-img img {
+        width: 100%;
+    }
+
+    .single-card-sm-img img {
+        height: 9vh;
     }
 
     /* CART SECTION  */
@@ -1006,6 +1027,10 @@ option {
     /* FOOTER  */
     .social-icon {
         width: 9%;
+    }
+
+    .single-card-sm-img img {
+        height: 8vh;
     }
 }
 
