@@ -17,30 +17,33 @@ import FaQs from './components/FaQs.js';
 import ProductSatisfaction from './components/ProductSatisfaction.js';
 import MiddleBanner from './components/MiddleBanner.js';
 import Chat from './components/Chat.js';
+import ScrollToTop from './components/ScrollToTop.js';
+
+
 
 function App() {
   return (
     <Router>
-      <>
-        <Header />
-        <Navbar />
 
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/targetcollection' element={<TargetCollection />} />
-          <Route path='/singlecard' element={<Singlecard />} />
-          <Route path='/search-result' element={<SearchResult />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/billing' element={<Billing />} />
-        </Routes>
-        <Chat />
-        <FaQs />
-        <ProductSatisfaction />
-        <MiddleBanner />
-        <Contact />
-        <Information />
-        <Footer />
-      </>
+      <ScrollToTop />
+      <Header />
+      <Navbar />
+
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/targetcollection' element={<TargetCollection />} />
+        <Route path='/singlecard' element={<Singlecard />} />
+        <Route path='/search-result' element={<SearchResult />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/billing' element={<Billing />} />
+      </Routes>
+      <Chat />
+      <FaQs />
+      <ProductSatisfaction />
+      <MiddleBanner />
+      <Contact />
+      <Information />
+      <Footer />
     </Router>
   );
 }
