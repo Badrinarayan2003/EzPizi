@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.chat-button{
+    background-color: red;
+}
 
 /* HEADER  */
 .header-section {
@@ -988,6 +991,7 @@ option {
     .middle-banner-section {
         padding: 2rem 0;
     }
+
 }
 
 @media (max-width: 440px) {

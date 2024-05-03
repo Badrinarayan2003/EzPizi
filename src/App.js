@@ -16,6 +16,7 @@ import Header from './components/Header.js';
 import FaQs from './components/FaQs.js';
 import ProductSatisfaction from './components/ProductSatisfaction.js';
 import MiddleBanner from './components/MiddleBanner.js';
+import Chat from './components/Chat.js';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/billing' element={<Billing />} />
         </Routes>
-
+        <Chat />
         <FaQs />
         <ProductSatisfaction />
         <MiddleBanner />
