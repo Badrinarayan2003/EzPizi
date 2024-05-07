@@ -28,7 +28,7 @@ function Product() {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': '217276f3f0msh1338072170a7306p19b1b5jsnc9cafc9493d2',
-                // 'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
+                // 'X-RapidAPI-Key': '9b2439f71fmshab5b5dec550cac7p193b97jsn2c338a90c895',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };

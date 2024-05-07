@@ -4,16 +4,22 @@ import Loader from './Loader';
 
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Singlecard() {
 
     const [data, setData] = useState({})
     const [productPhotos, setProductPhotos] = useState([])
+    const [productImg, setProductImg] = useState("")
+    const [similarProduct, setSimilarProduct] = useState([])
     const [loading, setLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState(false)
 
     const location = useLocation();
-    const id = location.state
+    const [id, setId] = useState(location.state)
+
 
     const getProductDetail = async () => {
 
@@ -22,7 +28,7 @@ function Singlecard() {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': '86e0ab6763msh576ab634def7f98p1aaa68jsnb67ae0e01049',
-                // 'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
+                // 'X-RapidAPI-Key': '9b2439f71fmshab5b5dec550cac7p193b97jsn2c338a90c895',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };
@@ -33,8 +39,12 @@ function Singlecard() {
             const response = await fetch(url, options);
             const result = await response.json();
             setData(result.data)
+            console.log(result.data);
+            setProductImg(result.data.product_photo)
             setProductPhotos(result.data.product_photos)
+            setSimilarProduct(result.data.product_variations.color)
             setLoading(false)
+            setErrorMsg(false)
 
         } catch (error) {
             setErrorMsg(true)
@@ -43,7 +53,7 @@ function Singlecard() {
 
     useEffect(() => {
         getProductDetail();
-    }, [])
+    }, [id])
 
     let price = data && data.product_price ? Number(data.product_price.replace('₹', '').replace(',', '')) : "";
     let originalPrice = data && data.product_original_price ? Number(data.product_original_price.replace('₹', '').replace(',', '')) : "";
@@ -66,6 +76,40 @@ function Singlecard() {
 
     const dispatch = useDispatch();
 
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: true,
+        responsive: [
+            {
+                breakpoint: 525,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 410,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 330,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: false,
+                }
+            }
+        ]
+    };
+
     return (
         <div className="singlecard-section overflow-hidden">
             {errorMsg && (<p className='fs-2 fw-bold text-center'>An error occurred while fetching data.</p>)}
@@ -74,11 +118,11 @@ function Singlecard() {
                     <div className="col-md-2 py-2">
                         <div className="row row-cols-6 row-cols-md-1 g-2 d-flex justify-content-center">
                             {
-                                productPhotos.map((item) => {
+                                productPhotos.map((item, index) => {
                                     return (
-                                        <div className="col">
+                                        <div className="col" key={index}>
                                             <div className="card single-card-sm-img border-0">
-                                                <img src={item} className="" alt="..." />
+                                                <img src={item} className="" alt={index} onMouseOver={() => setProductImg(item)} />
                                             </div>
                                         </div>
                                     )
@@ -93,7 +137,7 @@ function Singlecard() {
                                 <div className="card border-0">
                                     <div className="row g-0">
                                         <div className="col-md-5 d-flex justify-content-center single-card-img">
-                                            <img src={data.product_photo} className="img-fluid rounded-start" alt={data.product_title} style={{ height: "63vh" }} />
+                                            <img src={productImg} className="img-fluid rounded-start" alt={data.product_title} style={{ height: "63vh" }} />
                                         </div>
                                         <div className="col-md-7">
                                             <div className="card-body single-card-body">
@@ -143,13 +187,38 @@ function Singlecard() {
                                 </div>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                {similarProduct ? <p className="mb-0 my-1 px-3">You may like</p> : ""}
+                                <div className="row my-2">
+                                    <Slider {...settings}>
+                                        {
+                                            similarProduct?.map((item) => {
+                                                return (
+                                                    <div key={item.asin}>
+                                                        <div
+                                                            class="card align-items-center"
+                                                            onClick={() => setId(item.asin)}
+                                                        >
+                                                            <img src={item.photo} alt="..." style={{ width: "60px", height: "65px" }} />
+                                                            <div >
+                                                                <p class="card-text" style={{ fontSize: "0.6rem" }}>{item.value}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </Slider>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                     <div className="col-md-1"></div>
                 </div>
             )}
         </div>
     );
-}
 
+}
 export default Singlecard;

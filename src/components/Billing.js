@@ -21,39 +21,39 @@ function Billing() {
                 <div className="row">
                     <div className="col-md-8 my-4 payment-detail-box">
                         <h3 className="fw-bold text-center payment-heading">Delivery Address</h3>
-                        <form className="row g-3 needs-validation" novalidate>
+                        <form className="row g-3 needs-validation" noValidate>
                             <div className="col-md-4 pay-add-input">
-                                <label for="validationCustom01" className="form-label">Name</label>
+                                <label htmlFor="validationCustom01" className="form-label">Name</label>
                                 <input type="text" className="form-control" id="validationCustom01" placeholder="Full Name" required />
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div className="col-md-4 pay-add-input">
-                                <label for="validationCustom02" className="form-label">Email</label>
+                                <label htmlFor="validationCustom02" className="form-label">Email</label>
                                 <input type="email" className="form-control" id="validationCustom02" placeholder="Email" required />
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div className="col-md-4 pay-add-input">
-                                <label for="validationCustom02" className="form-label">Phone</label>
+                                <label htmlFor="validationCustom02" className="form-label">Phone</label>
                                 <input type="number" className="form-control" id="validationCustom02" placeholder="Phone" required />
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div className="col-md-6 pay-add-input">
-                                <label for="validationCustom03" className="form-label">City</label>
+                                <label htmlFor="validationCustom03" className="form-label">City</label>
                                 <input type="text" className="form-control" id="validationCustom03" placeholder="City" required />
                                 <div className="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div className="col-md-3 pay-add-input">
-                                <label for="validationCustom04" className="form-label">State</label>
+                                <label htmlFor="validationCustom04" className="form-label">State</label>
                                 <select className="form-select " id="validationCustom04" required>
-                                    <option selected value="">Odisha</option>
+                                    <option value="Odisha">Odisha</option>
                                     <option>Hydrabad</option>
                                     <option>maharastra</option>
                                     <option>bihar</option>
@@ -65,7 +65,7 @@ function Billing() {
                                 </div>
                             </div>
                             <div className="col-md-3 pay-add-input">
-                                <label for="validationCustom05" className="form-label">Zip</label>
+                                <label htmlFor="validationCustom05" className="form-label">Zip</label>
                                 <input type="number" className="form-control" id="validationCustom05" required />
                                 <div className="invalid-feedback">
                                     Please provide a valid zip.
@@ -74,7 +74,7 @@ function Billing() {
                             <div className="col-12">
                                 <div className="form-check">
                                     <input className="form-check-input text-light bg-dark" type="checkbox" value="" id="invalidCheck" required />
-                                    <label className="form-check-label" for="invalidCheck">
+                                    <label className="form-check-label" htmlFor="invalidCheck">
                                         Agree to terms and conditions
                                     </label>
                                     <div className="invalid-feedback">
@@ -90,7 +90,6 @@ function Billing() {
                 </div>
 
                 <div className="row">
-                    <div className="col-md-7"></div>
                     <div className="col-md-5 payment-detail-box my-4">
                         <h3 className="fw-bold text-center payment-heading">Payment Details</h3>
                         <div className="payment-sub-total">
@@ -130,6 +129,7 @@ function Billing() {
                             <a href="/" className="btn btn-dark fw-bold">Pay Now</a>
                         </div>
                     </div>
+                    <div className="col-md-7"></div>
                 </div>
 
             </div>

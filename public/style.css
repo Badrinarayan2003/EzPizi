@@ -1058,3 +1058,8 @@ option {
 .slick-slide>div {
     margin: 0 10px;
 }
+
+
+#single-variation-box{
+    width: 60px;
+}
