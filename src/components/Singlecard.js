@@ -39,7 +39,6 @@ function Singlecard() {
             const response = await fetch(url, options);
             const result = await response.json();
             setData(result.data)
-            console.log(result.data);
             setProductImg(result.data.product_photo)
             setProductPhotos(result.data.product_photos)
             setSimilarProduct(result.data.product_variations.color)

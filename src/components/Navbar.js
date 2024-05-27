@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 import { useSelector } from 'react-redux';
-import Header from "./Header";
 
 function Navbar() {
     const [visible, setVisible] = useState(false)
@@ -37,8 +36,7 @@ function Navbar() {
 
 
 
-    const cart = useSelector((state) => state.cart)
-
+    const cart = useSelector((state) => state.cartData.cart)
     const getTotalQuantity = () => {
         let total = 0
         cart.forEach(item => {
@@ -72,3 +70,4 @@ function Navbar() {
     )
 }
 export default Navbar;
+

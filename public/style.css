@@ -3,7 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-.chat-button{
+
+.chat-button {
     background-color: red;
 }
 
@@ -529,40 +530,6 @@
     outline: none;
 }
 
-/* billing section  */
-.billing-section {
-    padding-top: 6.5rem;
-    background-color: rgb(235, 236, 236);
-
-}
-
-.payment-detail-box {
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-}
-
-.payment-heading,
-.payment-sub-total,
-.payment-grand-total {
-    border-bottom: 1px solid gainsboro;
-}
-
-.pay-button a {
-    display: inherit;
-}
-
-.pay-add-input input {
-    background-color: rgb(235, 236, 236);
-    border: 1px solid darkgray;
-    outline: none;
-}
-
-.pay-add-input select,
-option {
-    background-color: rgb(235, 236, 236);
-    border: 1px solid darkgray;
-    outline: none;
-}
 
 /* FAQS SECTION  */
 .faqs-section {
@@ -632,6 +599,58 @@ option {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, rgba(100, 191, 246, 0.8436624649859944) 33%, rgba(196, 196, 196, 0.7120098039215687) 100%);
+}
+
+/* billing section  */
+.billing-section {
+    padding-top: 6.5rem;
+    background-color: rgb(235, 236, 236);
+
+}
+
+.payment-detail-box {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+.payment-heading,
+.payment-sub-total,
+.payment-grand-total {
+    border-bottom: 1px solid gainsboro;
+}
+
+.pay-button a {
+    display: inherit;
+}
+
+/* address saved section  */
+.selected-address {
+    background-color: green;
+    padding: 1px 10px;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.saved-address-box {
+    border: 1px solid gray;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.save-add-edit {
+    cursor: pointer;
+}
+
+.save-add-edit:hover {
+    text-decoration: underline;
+}
+
+.save-add-remove {
+    cursor: pointer;
 }
 
 @media(max-width:1200px) {
@@ -1057,9 +1076,4 @@ option {
 
 .slick-slide>div {
     margin: 0 10px;
-}
-
-
-#single-variation-box{
-    width: 60px;
 }

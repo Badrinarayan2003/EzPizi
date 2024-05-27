@@ -86,7 +86,7 @@ function Collections() {
                             </div>
                         </div>
                         <div>
-                            <div className="card  text-white"
+                            <div className="card text-white"
                                 onClick={() => {
                                     if (!isSwiping) {
                                         navigate("/targetcollection", { state: { img: '/images/womens_bg.jpg', searchKey: "womenswear", title: "For Womens" } })

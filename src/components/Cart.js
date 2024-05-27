@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 function Cart() {
 
-    const cart = useSelector((state) => state.cart)
+    const cart = useSelector((state) => state.cartData.cart)
     const dispatch = useDispatch()
 
     const getTotal = () => {
