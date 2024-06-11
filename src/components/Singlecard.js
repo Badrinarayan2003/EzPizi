@@ -20,15 +20,13 @@ function Singlecard() {
     const location = useLocation();
     const [id, setId] = useState(location.state)
 
-
     const getProductDetail = async () => {
 
         const url = `https://real-time-amazon-data.p.rapidapi.com/product-details?asin=${id}&country=IN`;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '86e0ab6763msh576ab634def7f98p1aaa68jsnb67ae0e01049',
-                // 'X-RapidAPI-Key': '9b2439f71fmshab5b5dec550cac7p193b97jsn2c338a90c895',
+                'X-RapidAPI-Key': '033d151b92mshe72ed1251e3dd7bp10bc7fjsn22c05c304c35',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };

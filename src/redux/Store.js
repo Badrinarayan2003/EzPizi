@@ -1,15 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import { cartReducer } from "./cartSlice";
-// import { addReducer } from "./addressSlice";
-  
-// export const store = configureStore({
-//     reducer: {
-//         cartData: cartReducer,
-//         addData: addReducer,
-//     }
-// })
-
-
 import { configureStore } from "@reduxjs/toolkit";
 import storage from 'redux-persist/lib/storage';
 import rootReducer from "./rootReducer";

@@ -24,8 +24,7 @@ function SearchResult() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '857c9fc704msh30700e761877e9cp15c13ejsn1f2cc21dae83',
-                // 'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
+                'X-RapidAPI-Key': '74c062bdc1mshe05052574fad335p1f9983jsnd506c864fb2c',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };

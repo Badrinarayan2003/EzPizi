@@ -1,8 +1,12 @@
 import { useSelector } from "react-redux";
 import AddressForm from "./AddressForm";
 import AddressSaved from "./AddressSaved";
+import { useEffect, useState } from "react";
 
 function Billing() {
+    const [save, setSave] = useState(false)
+    const [visible, setVisible] = useState(false)
+    const [appear, setAppear] = useState(false)
 
     const cart = useSelector((state) => state.cartData.cart)
     const address = useSelector((state) => state.addData.addresses)
@@ -17,14 +21,33 @@ function Billing() {
         return { totalQuantity, totalAmount }
     }
 
+    useEffect(() => {
+        if (address[0]) {
+            setSave(true)
+            setAppear(false)
+            setVisible(false)
+            setTimeout(() => {
+                setSave(false)
+                setVisible(true)
+            }, 2000);
+
+        } else {
+            setAppear(true)
+        }
+        console.log("hi", address);
+    }, [address])
+
+
+
     return (
         <div className="billing-section">
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 my-4 payment-detail-box">
                         <h3 className="fw-bold text-center payment-heading">Delivery Address</h3>
-                        {address[0] && <AddressSaved />}
-                        {address[0] ? "" : <AddressForm />}
+                        {save ? (<p className="fw-bold text-center">Saving...</p>) : ""}
+                        {visible && <AddressSaved />}
+                        {appear && <AddressForm />}
                     </div>
                 </div>
 

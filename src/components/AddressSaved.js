@@ -25,7 +25,6 @@ function AddressSaved() {
                                     <p className="fw-bold mb-0">Zip-Code: <span className="fw-normal">{item.Zip_Code}</span> </p>
                                     <p className="fw-bold mb-0">City: <span className="fw-normal">{item.City}</span> </p>
                                     <div className="d-flex justify-content-end">
-                                        <p className="save-add-edit fw-bold mb-0 me-3">Edit</p>
                                         <p className="save-add-remove fw-bold mb-0 me-3"
                                             onClick={() => dispatch(deleteAddress(index))}
                                         ><i class="fa fa-solid fa-trash"></i></p>

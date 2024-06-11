@@ -465,6 +465,7 @@
     height: 130px;
     border: 1px solid gainsboro;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .cart-title {
@@ -529,7 +530,6 @@
     border: 1px solid darkgray;
     outline: none;
 }
-
 
 /* FAQS SECTION  */
 .faqs-section {
@@ -632,21 +632,12 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 0.7rem;
-    cursor: pointer;
 }
 
 .saved-address-box {
     border: 1px solid gray;
     padding: 3px;
     border-radius: 7px;
-}
-
-.save-add-edit {
-    cursor: pointer;
-}
-
-.save-add-edit:hover {
-    text-decoration: underline;
 }
 
 .save-add-remove {

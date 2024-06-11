@@ -24,7 +24,6 @@ function TargetCollection() {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': '8b871a881emsh768c3a235462a8dp10f159jsn4e9e53f9413f',
-                // 'X-RapidAPI-Key': '8fd0b0ab8dmshe84a719f61c59bap1c8487jsnbb49cf74a228',
                 'X-RapidAPI-Host': 'real-time-amazon-data.p.rapidapi.com'
             }
         };

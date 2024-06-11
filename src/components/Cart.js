@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import { incrementQuantity, decrementQuantity, removeItem } from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 function Cart() {
 
     const cart = useSelector((state) => state.cartData.cart)
@@ -17,6 +17,7 @@ function Cart() {
         })
         return { totalPrice, totalQuantity }
     }
+    const navigate = useNavigate()
 
     return (
         <div className="cart-section">
@@ -46,7 +47,11 @@ function Cart() {
                                         return (
                                             <div className="col-md-12 d-flex my-3 justify-content-around align-items-center cart-box" key={item.id}>
                                                 <div className='text-center cart-img-title'>
-                                                    <img src={item.photo} className="cart-img" alt={item.title} />
+                                                    <img src={item.photo}
+                                                        className="cart-img"
+                                                        alt={item.title}
+                                                        onClick={() => navigate("/singlecard", { state: item.id })}
+                                                    />
                                                     <p className="card-text cart-title fw-bold">{item.title.substring(0, 15)}...</p>
                                                 </div>
                                                 <div className="d-flex align-items-center qty-box">

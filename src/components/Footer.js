@@ -5,8 +5,8 @@ function Footer() {
                 <div className="col-md-2 col-sm-3 col-12 d-flex justify-content-center">
                     <div className="footer-add">
                         <h3 className="mb-3 fw-bold">Location</h3>
-                        <p className="mb-1">Chhatia, Jajpur</p>
-                        <p>Odisha 754082</p>
+                        <p className="mb-1">India, Odisha</p>
+                        <p>Jajpur 754082</p>
                     </div>
                 </div>
                 <div className="col-md-2 col-sm-2"></div>
@@ -33,3 +33,4 @@ function Footer() {
 }
 
 export default Footer;
+
